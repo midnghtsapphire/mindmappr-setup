@@ -1,0 +1,49 @@
+{
+    "cleanup_strategy": {
+        "duplicate_threshold": 0.85,
+        "spam_threshold": 0.7,
+        "minimum_email_length": 50,
+        "keep_recent_months": 24
+    },
+    "supported_email_formats": [
+        "MBOX",
+        "EML",
+        "PST"
+    ],
+    "preprocessing_rules": {
+        "remove_short_emails": true,
+        "filter_by_recency": true,
+        "anonymize_personal_info": true
+    },
+    "deduplication_methods": [
+        "Hash-based exact match",
+        "Content-based similarity",
+        "TF-IDF vector comparison"
+    ],
+    "spam_detection_heuristics": [
+        "Keyword analysis",
+        "Sender reputation",
+        "Content similarity"
+    ],
+    "output_formats": {
+        "cleaned_emails": "MBOX",
+        "spam_emails": "MBOX"
+    },
+    "logging_and_reporting": {
+        "log_retention_days": 90,
+        "generate_detailed_report": true,
+        "track_metrics": [
+            "original_email_count",
+            "cleaned_email_count",
+            "spam_email_count",
+            "deduplication_rate"
+        ]
+    },
+    "privacy_protection": {
+        "redact_personal_identifiers": true,
+        "compliance_standards": [
+            "GDPR",
+            "CCPA"
+        ]
+    }
+}

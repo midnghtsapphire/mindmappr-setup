@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "revvel-email-organizer"
+version = "0.1.0"
+description = "CLI tool for organizing and processing emails using AI models"
+requires-python = ">=3.9"
+dependencies = [
+    "click>=8.1.0",
+    "requests>=2.28.0",
+    "python-dotenv>=1.0.0",
+    "cryptography>=41.0.0",
+    "pyyaml>=6.0.0"
+]
+
+[project.scripts]
+revvel = "revvel_email_organizer.cli:main"
+
+[tool.hatch.envs.default]
+dependencies = [
+    "pytest",
+    "mypy",
+    "black",
+    "ruff"
+]

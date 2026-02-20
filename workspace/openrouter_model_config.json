@@ -1,0 +1,57 @@
+{
+    "model_routing": {
+        "code_generation": {
+            "primary_models": [
+                "anthropic/claude-3.5-sonnet",
+                "google/gemini-pro-1.5",
+                "mistralai/mixtral-8x7b-instruct"
+            ],
+            "fallback_models": [
+                "openai/gpt-3.5-turbo",
+                "anthropic/claude-3-haiku"
+            ]
+        },
+        "email_processing": {
+            "primary_models": [
+                "anthropic/claude-3-haiku",
+                "openai/gpt-3.5-turbo",
+                "mistralai/mistral-7b-instruct"
+            ],
+            "fallback_models": [
+                "anthropic/claude-3-sonnet",
+                "google/gemini-pro"
+            ]
+        },
+        "machine_learning": {
+            "primary_models": [
+                "google/gemini-pro-1.5",
+                "anthropic/claude-3-opus",
+                "mistralai/mixtral-8x7b-instruct"
+            ],
+            "fallback_models": [
+                "anthropic/claude-3.5-sonnet",
+                "openai/gpt-4-turbo"
+            ]
+        },
+        "security_analysis": {
+            "primary_models": [
+                "anthropic/claude-3.5-sonnet",
+                "google/gemini-pro-1.5",
+                "openai/gpt-4-turbo"
+            ],
+            "fallback_models": [
+                "anthropic/claude-3-opus",
+                "mistralai/mixtral-8x7b-instruct"
+            ]
+        }
+    },
+    "delegation_strategy": {
+        "max_model_attempts": 3,
+        "error_threshold": 0.2,
+        "performance_tracking": true
+    },
+    "logging": {
+        "log_retention_days": 90,
+        "detail_level": "info"
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "framework_name": "Childhood Boundary Protection System",
+    "version": "1.0.0",
+    "core_objectives": [
+        "Educate children about personal boundaries",
+        "Prevent potential abuse",
+        "Empower through knowledge",
+        "Create safe communication channels"
+    ],
+    "developmental_stages": {
+        "infant_toddler": {
+            "age_range": "0-3 years",
+            "focus_areas": [
+                "Personal space awareness",
+                "Gentle touch understanding",
+                "Basic communication skills"
+            ]
+        },
+        "early_childhood": {
+            "age_range": "3-6 years",
+            "focus_areas": [
+                "Good touch/bad touch recognition",
+                "Emotional literacy",
+                "Consent basics"
+            ]
+        },
+        "middle_childhood": {
+            "age_range": "6-12 years",
+            "focus_areas": [
+                "Manipulation recognition",
+                "Self-advocacy skills",
+                "Support network identification"
+            ]
+        }
+    },
+    "intervention_triggers": {
+        "low_score_threshold": 0.6,
+        "intervention_categories": [
+            "personal_space_awareness",
+            "touch_sensitivity",
+            "emotional_literacy",
+            "consent_understanding",
+            "manipulation_recognition"
+        ]
+    },
+    "ethical_guidelines": {
+        "child_centered_approach": true,
+        "minimize_trauma": true,
+        "respect_individual_experience": true,
+        "confidentiality_protection": true
+    },
+    "support_mechanisms": {
+        "trusted_adult_network": true,
+        "anonymous_reporting_system": true,
+        "professional_intervention_protocols": true
+    }
+}

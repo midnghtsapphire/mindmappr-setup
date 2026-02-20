@@ -1,0 +1,47 @@
+{
+    "skill_management_strategy": {
+        "github_username": "MIDNGHTSAPPHIRE",
+        "skills_base_path": "/home/openclaw/skills",
+        "download_criteria": [
+            "ends with '-skill'",
+            "contains 'skill' in name"
+        ]
+    },
+    "accessibility_assessment": {
+        "wcag_compliance_threshold": 0.7,
+        "neurodivergent_friendly_threshold": 0.6
+    },
+    "team_rotation": {
+        "max_task_duration": {
+            "code_generation": 20,
+            "code_review": 15,
+            "specialized_tasks": 25
+        },
+        "stall_detection": {
+            "enabled": true,
+            "timeout_seconds": 900
+        }
+    },
+    "model_priority": {
+        "code_generation": [
+            "Kimi K2.5",
+            "DeepSeek V3.2",
+            "Trinity Large Preview"
+        ],
+        "code_review": [
+            "Venice AI",
+            "Claude Sonnet 4.5",
+            "DeepSeek V3.2 Speciale"
+        ],
+        "specialized_domains": [
+            "Gemini 2.5 Pro",
+            "Grok 4.1 Fast", 
+            "Llama 3.3 70B"
+        ]
+    },
+    "logging_and_tracking": {
+        "usage_tracking": true,
+        "performance_benchmarking": true,
+        "cost_optimization": true
+    }
+}

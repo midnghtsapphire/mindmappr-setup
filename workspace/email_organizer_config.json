@@ -1,0 +1,95 @@
+{
+    "application": {
+        "name": "Revvel Email Organizer",
+        "version": "1.0.0",
+        "environment": "production"
+    },
+    "email_processing": {
+        "supported_formats": [
+            "MBOX",
+            "PST",
+            "EML"
+        ],
+        "max_batch_size": 50000,
+        "performance_thresholds": {
+            "memory_usage": 80,
+            "cpu_usage": 85
+        }
+    },
+    "machine_learning": {
+        "classification": {
+            "models": [
+                "RandomForest",
+                "LogisticRegression"
+            ],
+            "feature_extraction": {
+                "tfidf": {
+                    "max_features": 5000,
+                    "ngram_range": [1, 2]
+                }
+            }
+        },
+        "deduplication": {
+            "similarity_threshold": 0.85,
+            "algorithm": "cosine"
+        }
+    },
+    "database": {
+        "type": "postgresql",
+        "host": "email-organizer-db.production.internal",
+        "port": 5432,
+        "dbname": "email_organizer_prod",
+        "user": "email_organizer_app",
+        "pool_size": 20,
+        "max_overflow": 10
+    },
+    "payment": {
+        "stripe": {
+            "tiers": [
+                {
+                    "name": "Free",
+                    "price": 0,
+                    "features": [
+                        "Basic Email Processing",
+                        "Limited Storage",
+                        "Community Support"
+                    ]
+                },
+                {
+                    "name": "Pro",
+                    "price": 9.99,
+                    "features": [
+                        "Unlimited Email Processing",
+                        "Advanced Analytics",
+                        "Priority Support"
+                    ]
+                },
+                {
+                    "name": "Enterprise",
+                    "price": 49.99,
+                    "features": [
+                        "Dedicated Infrastructure",
+                        "Custom Workflows",
+                        "24/7 Support",
+                        "White Labeling"
+                    ]
+                }
+            ]
+        }
+    },
+    "accessibility": {
+        "wcag_level": "AAA",
+        "design_principles": {
+            "low_cognitive_load": true,
+            "high_contrast_mode": true,
+            "keyboard_navigation": true,
+            "screen_reader_support": true
+        }
+    },
+    "monitoring": {
+        "log_retention_days": 90,
+        "performance_metrics": {
+            "collection_interval_seconds": 60
+        }
+    }
+}

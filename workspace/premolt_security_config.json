@@ -1,0 +1,29 @@
+{
+    "skill_name": "OpenClaw Agent Security Research",
+    "version": "0.1.0",
+    "integration_points": {
+        "mcp_token_management": true,
+        "security_dashboard": true,
+        "vulnerability_tracking": true,
+        "automated_reporting": true
+    },
+    "research_parameters": {
+        "default_sample_size": 1000,
+        "geolocation_coverage": 70,
+        "analysis_depth": "comprehensive"
+    },
+    "ethical_constraints": {
+        "no_destructive_testing": true,
+        "minimal_privacy_invasion": true,
+        "transparent_reporting": true,
+        "user_consent_required": true
+    },
+    "monetization": {
+        "token_generation_enabled": true,
+        "access_tiers": [
+            "research_preview",
+            "standard_access",
+            "advanced_insights"
+        ]
+    }
+}

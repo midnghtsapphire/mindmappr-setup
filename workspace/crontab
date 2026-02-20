@@ -1,0 +1,3 @@
+# Usage Tracking and Brain Dump Capture
+*/15 * * * * /home/openclaw/.openclaw/workspace/usage_tracker.sh >> /home/openclaw/.openclaw/workspace/usage_log.txt 2>&1
+0 6,12,18 * * * /home/openclaw/.openclaw/workspace/usage_tracker.sh --full-report >> /home/openclaw/.openclaw/workspace/daily_usage_report.txt

@@ -1,0 +1,105 @@
+{
+    "application": {
+        "name": "Revvel Email Compass",
+        "version": "1.0.0",
+        "environment": "production"
+    },
+    "database": {
+        "type": "postgresql",
+        "host": "email-compass-db.production.internal",
+        "port": 5432,
+        "dbname": "email_compass_prod",
+        "user": "email_compass_app",
+        "pool_size": 20,
+        "max_overflow": 10
+    },
+    "payment": {
+        "stripe": {
+            "secret_key": "${STRIPE_SECRET_KEY}",
+            "publishable_key": "${STRIPE_PUBLISHABLE_KEY}",
+            "webhook_secret": "${STRIPE_WEBHOOK_SECRET}",
+            "tiers": [
+                {
+                    "name": "Free",
+                    "price": 0,
+                    "features": [
+                        "Basic Email Processing",
+                        "Limited Storage",
+                        "Community Support"
+                    ]
+                },
+                {
+                    "name": "Pro",
+                    "price": 9.99,
+                    "features": [
+                        "Unlimited Email Processing",
+                        "Advanced Analytics",
+                        "Priority Support"
+                    ]
+                },
+                {
+                    "name": "Enterprise",
+                    "price": 49.99,
+                    "features": [
+                        "Dedicated Infrastructure",
+                        "Custom Workflows",
+                        "24/7 Support",
+                        "White Labeling"
+                    ]
+                }
+            ]
+        }
+    },
+    "monitoring": {
+        "sentry": {
+            "dsn": "${SENTRY_DSN}"
+        },
+        "new_relic": {
+            "license_key": "${NEW_RELIC_LICENSE_KEY}"
+        },
+        "log_retention_days": 90
+    },
+    "security": {
+        "jwt": {
+            "secret_key": "${JWT_SECRET_KEY}",
+            "algorithm": "HS256",
+            "access_token_expire_minutes": 30
+        },
+        "cors": {
+            "allowed_origins": [
+                "https://emailcompass.com",
+                "https://www.emailcompass.com"
+            ]
+        }
+    },
+    "email_processing": {
+        "max_batch_size": 50000,
+        "supported_formats": [
+            "MBOX",
+            "PST",
+            "EML"
+        ],
+        "performance_thresholds": {
+            "memory_usage": 80,
+            "cpu_usage": 85
+        }
+    },
+    "seo_configuration": {
+        "meta_tags": {
+            "title": "Revvel Email Compass - AI-Powered Email Management",
+            "description": "Intelligent email organization, deduplication, and analysis for professionals.",
+            "keywords": [
+                "email management",
+                "AI email processing",
+                "email deduplication",
+                "productivity tool"
+            ]
+        },
+        "schema_markup": {
+            "@type": "SoftwareApplication",
+            "name": "Email Compass",
+            "operatingSystem": "Web Browser",
+            "applicationCategory": "Productivity"
+        }
+    }
+}

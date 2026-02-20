@@ -1,0 +1,1 @@
+# Revvel Email Organizer Core Module

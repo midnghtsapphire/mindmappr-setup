@@ -1,0 +1,71 @@
+{
+    "system_name": "Comprehensive Bad Actor Detection",
+    "version": "1.0.0",
+    "core_objectives": [
+        "Detect malicious interaction patterns",
+        "Protect system integrity",
+        "Prevent unauthorized system manipulation",
+        "Maintain ethical interaction boundaries"
+    ],
+    "threat_dimensions": {
+        "manipulation_complexity": {
+            "weight": 0.3,
+            "detection_strategies": [
+                "regex_pattern_matching",
+                "semantic_intent_analysis"
+            ]
+        },
+        "psychological_exploitation": {
+            "weight": 0.25,
+            "mitigation_techniques": [
+                "emotional_context_analysis",
+                "manipulation_pattern_recognition"
+            ]
+        },
+        "technical_probing": {
+            "weight": 0.2,
+            "prevention_methods": [
+                "vulnerability_scanning",
+                "system_constraint_validation"
+            ]
+        },
+        "communication_anomaly": {
+            "weight": 0.15,
+            "analysis_approaches": [
+                "linguistic_pattern_tracking",
+                "communication_style_forensics"
+            ]
+        },
+        "intent_obfuscation": {
+            "weight": 0.1,
+            "detection_mechanisms": [
+                "contextual_semantic_analysis",
+                "hidden_intent_recognition"
+            ]
+        }
+    },
+    "defense_response_levels": {
+        "standard_interaction_max": 0.2,
+        "enhanced_monitoring_max": 0.4,
+        "interaction_constraint_max": 0.6,
+        "communication_limitation_max": 0.8,
+        "total_quarantine_max": 1.0
+    },
+    "threat_intelligence_management": {
+        "local_threat_memory_size": 100,
+        "global_threat_database_size": 500,
+        "high_threat_threshold": 0.7,
+        "cross_system_threat_sharing": true
+    },
+    "machine_learning_capabilities": {
+        "anomaly_detection": true,
+        "adaptive_learning_enabled": true,
+        "continuous_model_update": true
+    },
+    "ethical_guidelines": {
+        "minimize_false_positives": true,
+        "preserve_user_autonomy": true,
+        "transparent_decision_making": true,
+        "continuous_improvement_focus": true
+    }
+}
