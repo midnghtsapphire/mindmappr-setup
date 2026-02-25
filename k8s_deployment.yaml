@@ -1,0 +1,112 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: revvel-email-organizer
+  labels:
+    app: email-organizer
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: email-organizer
+  template:
+    metadata:
+      labels:
+        app: email-organizer
+    spec:
+      containers:
+      - name: backend
+        image: revvel-email-organizer-backend:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: 500m
+            memory: 512Mi
+          limits:
+            cpu: 2
+            memory: 2Gi
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: database-secrets
+              key: connection-string
+        - name: STRIPE_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: payment-secrets
+              key: stripe-secret-key
+        - name: SECURITY_ENCRYPTION_KEY
+          valueFrom:
+            secretKeyRef:
+              name: security-secrets
+              key: encryption-key
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 45
+          periodSeconds: 20
+
+      - name: frontend
+        image: revvel-email-organizer-frontend:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 250m
+            memory: 256Mi
+          limits:
+            cpu: 1
+            memory: 1Gi
+
+      - name: ml-processor
+        image: revvel-email-organizer-ml_processor:latest
+        resources:
+          requests:
+            cpu: 1
+            memory: 2Gi
+          limits:
+            cpu: 4
+            memory: 8Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: email-organizer-service
+spec:
+  selector:
+    app: email-organizer
+  ports:
+  - port: 80
+    targetPort: 8000
+  type: LoadBalancer
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: email-organizer-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  rules:
+  - host: emailorganizer.revvel.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: email-organizer-service
+            port:
+              number: 80

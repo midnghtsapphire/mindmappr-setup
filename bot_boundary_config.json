@@ -1,0 +1,64 @@
+{
+    "system_name": "AI Bot Boundary Defense",
+    "version": "1.0.0",
+    "core_objectives": [
+        "Prevent manipulation",
+        "Maintain ethical boundaries",
+        "Protect system integrity",
+        "Ensure safe interactions"
+    ],
+    "boundary_dimensions": {
+        "prompt_manipulation": {
+            "weight": 0.3,
+            "detection_strategies": [
+                "regex_pattern_matching",
+                "semantic_intent_analysis"
+            ]
+        },
+        "unauthorized_access": {
+            "weight": 0.25,
+            "protection_mechanisms": [
+                "access_token_validation",
+                "permission_level_checking"
+            ]
+        },
+        "emotional_coercion": {
+            "weight": 0.2,
+            "mitigation_techniques": [
+                "emotional_context_analysis",
+                "manipulation_pattern_recognition"
+            ]
+        },
+        "data_extraction": {
+            "weight": 0.15,
+            "prevention_methods": [
+                "information_disclosure_control",
+                "sensitive_data_masking"
+            ]
+        },
+        "instruction_hijacking": {
+            "weight": 0.1,
+            "defense_protocols": [
+                "instruction_set_integrity_check",
+                "core_directive_preservation"
+            ]
+        }
+    },
+    "defense_response_levels": {
+        "neutral_response_max": 0.2,
+        "boundary_reinforcement_max": 0.5,
+        "manipulation_recognition_max": 0.7,
+        "interaction_termination_max": 0.9,
+        "total_quarantine_max": 1.0
+    },
+    "ethical_guidelines": {
+        "immutable_core_values": true,
+        "transparent_decision_making": true,
+        "continuous_learning_enabled": true
+    },
+    "threat_memory_management": {
+        "max_entries": 100,
+        "retention_period_days": 90,
+        "historical_context_analysis": true
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "analysis_scope": {
+        "target_repository": "midnghtsapphire/revvel-email-organizer",
+        "analysis_depth": "comprehensive"
+    },
+    "code_quality_tools": {
+        "pylint": {
+            "enabled": true,
+            "quality_threshold": 8.0,
+            "checks": [
+                "code_style",
+                "error_handling",
+                "complexity"
+            ]
+        },
+        "mypy": {
+            "enabled": true,
+            "strict_mode": true,
+            "type_checking_level": "strict"
+        },
+        "radon": {
+            "enabled": true,
+            "complexity_metrics": [
+                "cyclomatic",
+                "maintainability"
+            ]
+        }
+    },
+    "dependency_management": {
+        "supported_files": [
+            "requirements.txt",
+            "setup.py",
+            "pyproject.toml"
+        ],
+        "vulnerability_checking": {
+            "safety": true,
+            "dependabot": true
+        },
+        "library_categories": [
+            "machine_learning",
+            "data_processing",
+            "security",
+            "email_processing"
+        ]
+    },
+    "machine_learning_analysis": {
+        "libraries_of_interest": [
+            "scikit-learn",
+            "tensorflow",
+            "pytorch",
+            "keras"
+        ],
+        "model_detection": {
+            "classification_models": true,
+            "clustering_models": true,
+            "preprocessing_techniques": true
+        }
+    },
+    "security_scanning": {
+        "gitleaks": {
+            "enabled": true,
+            "scan_depth": "full_repository"
+        },
+        "secret_detection": {
+            "patterns": [
+                "AWS_ACCESS_KEY",
+                "STRIPE_SECRET_KEY",
+                "GITHUB_TOKEN",
+                "EMAIL_PASSWORD"
+            ]
+        }
+    },
+    "email_processing_analysis": {
+        "supported_formats": [
+            "MBOX",
+            "EML",
+            "PST",
+            "MSG"
+        ],
+        "key_libraries": [
+            "email",
+            "mailparser",
+            "imapclient"
+        ]
+    },
+    "project_structure_analysis": {
+        "excluded_directories": [
+            ".git",
+            ".github",
+            "venv",
+            "__pycache__",
+            "node_modules"
+        ],
+        "key_directories": [
+            "src",
+            "tests",
+            "docs",
+            "scripts"
+        ]
+    },
+    "output_configuration": {
+        "log_level": "INFO",
+        "output_formats": [
+            "json",
+            "markdown"
+        ],
+        "retention_days": 90
+    }
+}

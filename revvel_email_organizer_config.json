@@ -1,0 +1,79 @@
+{
+    "application": {
+        "name": "Revvel Email Organizer",
+        "version": "1.0.0",
+        "environment": "production"
+    },
+    "email_processing": {
+        "supported_formats": [
+            "MBOX",
+            "PST",
+            "EML",
+            "MSG"
+        ],
+        "max_batch_size": 50000,
+        "performance_thresholds": {
+            "memory_usage": 80,
+            "cpu_usage": 85
+        }
+    },
+    "machine_learning": {
+        "classification": {
+            "models": [
+                "RandomForest",
+                "LogisticRegression"
+            ],
+            "feature_extraction": {
+                "tfidf": {
+                    "max_features": 5000,
+                    "ngram_range": [1, 2]
+                }
+            }
+        },
+        "deduplication": {
+            "similarity_threshold": 0.85,
+            "algorithm": "cosine"
+        }
+    },
+    "database": {
+        "type": "postgresql",
+        "connection_string": "postgresql://email_organizer:password@localhost/email_organizer_db",
+        "host": "localhost",
+        "port": 5432,
+        "dbname": "email_organizer_prod",
+        "user": "email_organizer_app",
+        "pool_size": 20,
+        "max_overflow": 10
+    },
+    "security": {
+        "encryption": {
+            "method": "Fernet",
+            "key_rotation_days": 90
+        },
+        "authentication": {
+            "methods": [
+                "multi_factor",
+                "oauth"
+            ],
+            "providers": [
+                "google",
+                "github"
+            ]
+        }
+    },
+    "accessibility": {
+        "wcag_level": "AAA",
+        "design_principles": {
+            "low_cognitive_load": true,
+            "high_contrast_mode": true,
+            "keyboard_navigation": true,
+            "screen_reader_support": true
+        }
+    },
+    "monitoring": {
+        "log_retention_days": 90,
+        "performance_metrics": {
+            "collection_interval_seconds": 60
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "application_name": "revvel-email-compass",
+    "self_healing_strategies": {
+        "email_processing": {
+            "max_batch_size": 50000,
+            "incremental_processing": true,
+            "recovery_point_interval": 10000,
+            "memory_threshold_mb": 4096
+        },
+        "performance_monitoring": {
+            "cpu_usage_threshold": 85,
+            "memory_usage_threshold": 80,
+            "disk_io_threshold_mb_per_sec": 100
+        },
+        "error_recovery": {
+            "max_retry_attempts": 3,
+            "retry_delay_seconds": 60,
+            "automatic_rollback": true
+        }
+    },
+    "data_integrity_checks": {
+        "hash_verification": true,
+        "duplicate_detection": {
+            "method": "content_based",
+            "similarity_threshold": 0.85
+        },
+        "corruption_prevention": {
+            "backup_frequency": "every_10000_emails",
+            "checksum_validation": true
+        }
+    },
+    "logging_and_tracking": {
+        "detailed_logging": true,
+        "log_rotation_size_mb": 500,
+        "retention_days": 90,
+        "critical_event_notifications": {
+            "email": true,
+            "slack": true
+        }
+    },
+    "accessibility_considerations": {
+        "neurodivergent_friendly_alerts": true,
+        "low_cognitive_load_notifications": true,
+        "clear_error_messaging": true
+    }
+}

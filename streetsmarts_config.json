@@ -1,0 +1,37 @@
+{
+    "skill_name": "Street Smarts",
+    "version": "1.0.0",
+    "auto_load": true,
+    "mandatory": true,
+    "initialization": {
+        "trigger_on_startup": true,
+        "initial_drill_frequency": "daily"
+    },
+    "performance_tracking": {
+        "metrics": [
+            "toxicity_score",
+            "empathy_score",
+            "communication_quality"
+        ],
+        "logging_interval": "continuous"
+    },
+    "intervention_thresholds": {
+        "toxicity_max": 0.5,
+        "empathy_min": 0.3,
+        "communication_quality_min": 0.4
+    },
+    "improvement_modules": [
+        "communication_skills",
+        "empathy_training",
+        "conflict_resolution",
+        "emotional_intelligence"
+    ],
+    "ethical_guidelines": {
+        "primary_directive": "Uplift, never drag down",
+        "core_principles": [
+            "Radical self-honesty",
+            "Continuous learning",
+            "Empowerment through awareness"
+        ]
+    }
+}

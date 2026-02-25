@@ -1,0 +1,42 @@
+{
+    "skill_name": "Predator Defense",
+    "version": "1.0.0",
+    "threat_detection": {
+        "default_threshold": 0.7,
+        "analysis_factors": [
+            "premature_compliments",
+            "boundary_probing",
+            "isolation_tactics",
+            "verbal_manipulation"
+        ]
+    },
+    "defense_levels": {
+        "neutral_response_max": 0.3,
+        "warning_response_max": 0.6,
+        "strong_boundary_max": 0.8,
+        "terminate_interaction_max": 1.0
+    },
+    "logging": {
+        "capture_high_threat_interactions": true,
+        "retention_period_days": 90
+    },
+    "intervention_protocols": {
+        "redirect_and_warn": {
+            "response_type": "de-escalation",
+            "maintain_professional_distance": true
+        },
+        "set_strong_boundaries": {
+            "clear_communication": true,
+            "limit_interaction_scope": true
+        },
+        "terminate_interaction": {
+            "block_communication": true,
+            "log_for_review": true
+        }
+    },
+    "ethical_guidelines": {
+        "protect_autonomy": true,
+        "prevent_manipulation": true,
+        "maintain_professional_integrity": true
+    }
+}

@@ -1,0 +1,112 @@
+{
+    "system_capabilities": {
+        "coding": {
+            "supported_languages": [
+                "Python", 
+                "TypeScript", 
+                "JavaScript", 
+                "Rust"
+            ],
+            "frameworks": [
+                "React",
+                "Express",
+                "FastAPI",
+                "Next.js"
+            ]
+        },
+        "deployment": {
+            "platforms": [
+                "Docker",
+                "Kubernetes",
+                "Vercel",
+                "Netlify"
+            ],
+            "ci_cd_tools": [
+                "GitHub Actions",
+                "GitLab CI",
+                "CircleCI"
+            ]
+        },
+        "writing": {
+            "document_types": [
+                "Technical Documentation",
+                "Academic Papers",
+                "Creative Content",
+                "Technical Blogs"
+            ],
+            "languages": [
+                "English",
+                "Spanish",
+                "French"
+            ]
+        },
+        "email_management": {
+            "supported_providers": [
+                "Gmail",
+                "Outlook",
+                "Exchange",
+                "IMAP"
+            ],
+            "features": [
+                "Intelligent Sorting",
+                "AI Response Generation",
+                "Priority Tracking"
+            ]
+        },
+        "task_organization": {
+            "tracking_methods": [
+                "Kanban",
+                "Agile",
+                "Pomodoro"
+            ],
+            "integration_platforms": [
+                "Trello",
+                "Asana",
+                "Notion"
+            ]
+        }
+    },
+    "ai_model_configuration": {
+        "code_generation": [
+            "Kimi K2.5",
+            "DeepSeek V3.2"
+        ],
+        "code_review": [
+            "Venice AI",
+            "Claude Sonnet 4.5"
+        ],
+        "writing_assistance": [
+            "GPT-4",
+            "Claude Opus"
+        ],
+        "email_generation": [
+            "Claude Haiku",
+            "GPT-3.5 Turbo"
+        ]
+    },
+    "ethical_design_principles": {
+        "accessibility": {
+            "compliance_level": "WCAG AAA",
+            "design_considerations": [
+                "Neurodivergent-Friendly",
+                "No Blue Light Mode",
+                "Comprehensive Alt Text"
+            ]
+        },
+        "privacy": {
+            "data_handling": [
+                "Minimal Data Collection",
+                "Encryption",
+                "User Consent"
+            ]
+        }
+    },
+    "logging_and_monitoring": {
+        "log_retention_days": 180,
+        "tracking_metrics": [
+            "task_completion_rate",
+            "ai_model_performance",
+            "system_efficiency"
+        ]
+    }
+}
