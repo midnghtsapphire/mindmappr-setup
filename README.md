@@ -1,5 +1,12 @@
 # MindMappr Setup — OpenClaw Droplet Documentation
 
+
+<!-- AUTO-PACKAGE-BADGES:START -->
+<!-- Auto-generated package badges -->
+
+![PyPI version](https://img.shields.io/pypi/v/revvel-email-organizer?style=flat-square&logo=pypi&color=green) ![PyPI downloads](https://img.shields.io/pypi/dm/revvel-email-organizer?style=flat-square&color=brightgreen) ![PyPI license](https://img.shields.io/pypi/l/revvel-email-organizer?style=flat-square) [![Deployed](https://img.shields.io/badge/deployed-0.1.0-blue?style=flat-square)](https://pypi.org/project/revvel-email-organizer)
+
+<!-- AUTO-PACKAGE-BADGES:END -->
 Complete documentation and configuration backup for the MindMappr/OpenClaw agent running on DigitalOcean.
 
 ## Droplet Details
