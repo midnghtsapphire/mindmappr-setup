@@ -1,2 +1,5 @@
 droplet_ssh_key
 droplet_ssh_key.pub
+
+# local secrets
+configs/*.env
